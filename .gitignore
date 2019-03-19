@@ -1,0 +1,10 @@
+Sources/backup
+Sources/lib
+*.exe
+*.bat
+*.dbg
+*.ini
+*.res
+!CreateLink.res
+Dry/*
+!Dry/*.pas
