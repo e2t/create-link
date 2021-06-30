@@ -12,15 +12,17 @@
       <UseXPManifest Value="True"/>
       <XPManifest>
         <DpiAware Value="True"/>
+        <ExecutionLevel Value="requireAdministrator"/>
       </XPManifest>
       <Icon Value="0"/>
     </General>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <MinorVersionNr Value="1"/>
+      <RevisionNr Value="1"/>
       <BuildNr Value="1"/>
       <Language Value="0419"/>
-      <StringTable FileDescription="Создать ссылку" LegalCopyright="© 2019 Eduard E. Tikhenko" OriginalFilename="CreateLink.exe" ProductName="CreateLink" ProductVersion="0.1.0"/>
+      <StringTable FileDescription="Создать ссылку" LegalCopyright="© 2019 Eduard E. Tikhenko" OriginalFilename="CreateLink.exe" ProductName="CreateLink" ProductVersion="0.1.1"/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>
@@ -62,6 +64,12 @@
       <IncludeFiles Value="$(ProjOutDir)"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <CStyleOperator Value="False"/>
+        <AllowLabel Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
     <Linking>
       <Debugging>
         <UseExternalDbgSyms Value="True"/>

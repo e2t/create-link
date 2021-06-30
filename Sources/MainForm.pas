@@ -8,7 +8,11 @@
 
 unit MainForm;
 
-{$mode objfpc}{$H+}
+{$MODE OBJFPC}
+{$LONGSTRINGS ON}
+{$ASSERTIONS ON}
+{$RANGECHECKS ON}
+{$BOOLEVAL OFF}
 
 interface
 
@@ -68,11 +72,10 @@ end;
 procedure TForm1.OKButtonClick(Sender: TObject);
 var
   MkLinkParameter: string = '';
-  FSOName, DestDir: string;
+  FSOName, DestDir, MkLinkOutput: string;
   MkLink: TProcess;
   OutputStringList: TStringList;
   Encoded: Boolean;
-  MkLinkOutput: string;
   OutputDlgType: TMsgDlgType;
 begin
   if PageControl.PageIndex = TabSheetDir.TabIndex then
@@ -99,8 +102,7 @@ begin
   MkLink.Parameters.Add(ExtractFileName(FSOName));
   MkLink.Parameters.Add(FSOName);
   MkLink.CurrentDirectory := DestDir;
-  MkLink.Options := MkLink.Options + [poWaitOnExit, poStderrToOutPut,
-    poUsePipes];
+  MkLink.Options := MkLink.Options + [poWaitOnExit, poStderrToOutPut, poUsePipes];
 
   MkLink.Execute;
 
@@ -115,11 +117,12 @@ begin
   else
     OutputDlgType := mtError;
 
-  MessageDlg(MkLinkOutput, OutputDlgType, [mbOk], 0);
+  MessageDlg(MkLinkOutput, OutputDlgType, [mbOK], 0);
 
   OutputStringList.Free;
   MkLink.Free;
 end;
 
 end.
+
 

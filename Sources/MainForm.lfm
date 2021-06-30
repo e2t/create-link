@@ -7,7 +7,7 @@ object Form1: TForm1
   ClientHeight = 245
   ClientWidth = 640
   OnCreate = FormCreate
-  LCLVersion = '2.0.0.4'
+  LCLVersion = '2.0.12.0'
   object PageControl: TPageControl
     AnchorSideLeft.Control = Owner
     AnchorSideRight.Control = Owner
@@ -97,7 +97,6 @@ object Form1: TForm1
     Width = 628
     OKButton.Name = 'OKButton'
     OKButton.Caption = 'Создать'
-    OKButton.DefaultCaption = False
     OKButton.OnClick = OKButtonClick
     HelpButton.Name = 'HelpButton'
     HelpButton.DefaultCaption = True
