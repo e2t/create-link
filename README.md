@@ -1,4 +1,6 @@
-﻿# CreateLink
+This project has been moved to https://codeberg.org/e2t/create-link
+ 
+ # CreateLink
 Графический интерфейс для команды MKLINK.
 
 ### Авторские права
